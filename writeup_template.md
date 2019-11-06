@@ -21,18 +21,14 @@ The goals / steps of this project are the following:
 [image1]: ./output_images/undistort_test1.jpg "Undistorted"
 [image2]: ./test_images/test1.jpg "First Image"
 [image3]: ./output_images/thresholded_color_test1.jpg "Binary Color Thresh"
-[image4]: ./test_images/straight_lines1.jpg "Unwarp Example"
+[image4]: ./test_images/straight_lines2.jpg "Unwarp Example"
 [image5]: ./output_images/straight_lines1.jpg "Warp Example"
 [image6]: ./output_images/searching_points.png "Searching points"
 [image7]: ./output_images/test2.jpg "Fit Visual"
-[image8]: ./output_images/sliding_window.jpg "Sliding Window"
-[image9]: ./output_images/final_window.jpg "Output"
+[image8]: ./output_images/sliding_window.jpeg "Sliding Window"
+[image9]: ./output_images/final_window.jpeg "Output"
 [video1]: ./examples/output.avi "Video"
 [video2]: ./project_video_processed_w_sliding_window.mp4 "Video Sliding"
-
-## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
-
-### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
 ---
 
@@ -131,8 +127,9 @@ I did this in lines 264 through 292 in my code in `./examples/entregable.py`. th
 `
 left_fit_cr = np.polyfit(ploty*ym_per_pix, left_fitx*xm_per_pix, 2)
 right_fit_cr = np.polyfit(ploty*ym_per_pix, right_fitx*xm_per_pix, 2)
-`
 
+`
+![alt text][image8]
 With this polynomial coefficients now we calculate the curvature associated to a point just in the bottom of the warped image, with this info, now we calculate the distance beetween both lines, and the position of the camera (and of the car) from the central line of them.
 `
     #Calculation of R_curve (radius of curvature)
